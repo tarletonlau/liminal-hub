@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HUB // INTERNAL</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@100..800&family=Archivo:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Archivo', 'sans-serif'],
+              mono: ['JetBrains Mono', 'monospace'],
+            },
+            colors: {
+              'brutal-bg': '#f0f0f0',
+              'brutal-black': '#0a0a0a',
+              'brutal-yellow': '#ccff00',
+              'brutal-red': '#ff2a00',
+            },
+            boxShadow: {
+              'hard': '4px 4px 0px 0px rgba(10, 10, 10, 1)',
+              'hard-sm': '2px 2px 0px 0px rgba(10, 10, 10, 1)',
+              'hard-lg': '8px 8px 0px 0px rgba(10, 10, 10, 1)',
+            }
+          },
+        },
+      }
+    </script>
+    <style>
+      body {
+        background-color: #f0f0f0;
+        color: #0a0a0a;
+      }
+      /* Custom Scrollbar for that raw feel */
+      ::-webkit-scrollbar {
+        width: 12px;
+        background: #0a0a0a;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #ffffff;
+        border: 2px solid #0a0a0a;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #ccff00;
+      }
+      .marquee-container {
+        overflow: hidden;
+        white-space: nowrap;
+      }
+      .marquee-content {
+        display: inline-block;
+        animation: marquee 20s linear infinite;
+      }
+      @keyframes marquee {
+        0% { transform: translateX(0); }
+        100% { transform: translateX(-50%); }
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "react": "https://esm.sh/react@^19.2.3",
+    "lucide-react": "https://esm.sh/lucide-react@^0.562.0"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body>
+    <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>
